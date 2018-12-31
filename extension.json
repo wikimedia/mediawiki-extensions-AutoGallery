@@ -4,8 +4,14 @@
 	"author": [
 		"Kunal Mehta"
 	],
+	"descriptionmsg": "autogallery-desc",
 	"url": "https://www.mediawiki.org/wiki/Extension:AutoGallery",
 	"version": "0.1",
+	"MessagesDirs": {
+		"AutoGallery": [
+			"i18n"
+		]
+	},
 	"AutoloadClasses": {
 		"AutoGalleryHooks": "AutoGallery.hooks.php",
 		"AutoGallery": "AutoGallery.php"
