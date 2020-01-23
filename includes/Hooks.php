@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2017 Kunal Mehta <legoktm@member.fsf.org>
+ * Copyright (C) 2017-2020 Kunal Mehta <legoktm@member.fsf.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -16,7 +16,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-class AutoGalleryHooks {
+namespace AutoGallery;
+
+class Hooks {
 	public static function onGalleryGetModes( array &$modeArray ) {
 		$modeArray['auto'] = AutoGallery::class;
 	}
