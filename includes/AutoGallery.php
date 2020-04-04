@@ -19,6 +19,7 @@
 namespace AutoGallery;
 
 use File;
+use MediaWiki\MediaWikiServices;
 use NolinesImageGallery;
 
 class AutoGallery extends NolinesImageGallery {
@@ -48,7 +49,13 @@ class AutoGallery extends NolinesImageGallery {
 
 		// If there's no link, default to the absolute URL of the file
 		if ( !$link ) {
-			$link = wfFindFile( $title )->getUrl();
+			if ( method_exists( MediaWikiServices::class, 'getRepoGroup' ) ) {
+				// MediaWiki 1.34+
+				$link = MediaWikiServices::getInstance()->getRepoGroup()
+					->findFile( $title )->getUrl();
+			} else {
+				$link = wfFindFile( $title )->getUrl();
+			}
 		}
 
 		$this->mImages[] = [ $title, $html, $alt, $link, $handlerOpts ];
