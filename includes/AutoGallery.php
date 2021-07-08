@@ -23,12 +23,23 @@ use MediaWiki\MediaWikiServices;
 use NolinesImageGallery;
 
 class AutoGallery extends NolinesImageGallery {
+	/**
+	 * @param string $mode
+	 * @param null $context
+	 */
 	public function __construct( $mode = 'traditional', $context = null ) {
 		parent::__construct( $mode, $context );
 		// Output CSS 'nolines' class
 		$this->mMode = 'nolines';
 	}
 
+	/**
+	 * @param Title $title
+	 * @param string $html
+	 * @param string $alt
+	 * @param string $link
+	 * @param array $handlerOpts
+	 */
 	public function add( $title, $html = '', $alt = '', $link = '', $handlerOpts = [] ) {
 		if ( $title instanceof File ) {
 			// Old calling convention

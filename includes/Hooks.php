@@ -19,6 +19,9 @@
 namespace AutoGallery;
 
 class Hooks {
+	/**
+	 * @param array &$modeArray
+	 */
 	public static function onGalleryGetModes( array &$modeArray ) {
 		$modeArray['auto'] = AutoGallery::class;
 	}
