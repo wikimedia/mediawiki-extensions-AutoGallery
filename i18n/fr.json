@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"Verdy p"
 		]
 	},
-	"autogallery-desc": "Ajoute un mode galerie (<code>auto</code>) à la balise wikitexte <code><nowiki><gallery></nowiki></code>."
+	"autogallery-desc": "Ajoute un mode galerie (<code>auto</code>) à la balise de wikicode <code><nowiki><gallery></nowiki></code>."
 }
