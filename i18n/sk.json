@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"autogallery-desc": "Pridáva nový režim galérie (<code>auto</code>) do wikitextovej značky <code><nowiki><gallery></nowiki></code>."
+}
